@@ -1,10 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppCRM.API", "TestAppCRM.API\TestAppCRM.API.csproj", "{E3318D98-9225-4E74-83BA-70BF1EECB79B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{391866FC-AFEF-4BD3-B518-06843A374732} = {391866FC-AFEF-4BD3-B518-06843A374732}
+		{B0AEC8F6-0055-4D0D-9AFF-F8D1035736E1} = {B0AEC8F6-0055-4D0D-9AFF-F8D1035736E1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppCRM.Application", "TestAppCRM.Application\TestAppCRM.Application.csproj", "{391866FC-AFEF-4BD3-B518-06843A374732}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1FFE5662-8472-4BCD-B5AD-39318C50B54D} = {1FFE5662-8472-4BCD-B5AD-39318C50B54D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppCRM.DataAccess", "TestAppCRM.DataAccess\TestAppCRM.DataAccess.csproj", "{B0AEC8F6-0055-4D0D-9AFF-F8D1035736E1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{391866FC-AFEF-4BD3-B518-06843A374732} = {391866FC-AFEF-4BD3-B518-06843A374732}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppCRM.DomainModel", "TestAppCRM.DomainModel\TestAppCRM.DomainModel.csproj", "{1FFE5662-8472-4BCD-B5AD-39318C50B54D}"
 EndProject

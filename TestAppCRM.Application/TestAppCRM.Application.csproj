@@ -2,9 +2,31 @@
 
     <PropertyGroup>
         <OutputType>dll</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <TargetFramework>net10.0</TargetFramework>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="16.1.1" />
+      <PackageReference Include="FluentValidation" Version="12.1.1" />
+      <PackageReference Include="MediatR" Version="14.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Contacts\Commands\CreateContactCommand\" />
+      <Folder Include="Contacts\Commands\DeleteContactCommand\" />
+      <Folder Include="Contacts\Commands\UpdateContactCommand\" />
+      <Folder Include="Contacts\DTOs\" />
+      <Folder Include="Contacts\Mappings\" />
+      <Folder Include="Contacts\Queries\GetAllContactsQuery\" />
+      <Folder Include="Contacts\Queries\GetContactByIdQuery\" />
+      <Folder Include="Contacts\Validators\" />
+      <Folder Include="Interfaces\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TestAppCRM.DomainModel\TestAppCRM.DomainModel.csproj" />
+    </ItemGroup>
 
 </Project>
