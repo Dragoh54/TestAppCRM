@@ -22,7 +22,6 @@
       <Folder Include="Contacts\Queries\GetAllContactsQuery\" />
       <Folder Include="Contacts\Queries\GetContactByIdQuery\" />
       <Folder Include="Contacts\Validators\" />
-      <Folder Include="Interfaces\" />
     </ItemGroup>
 
     <ItemGroup>
