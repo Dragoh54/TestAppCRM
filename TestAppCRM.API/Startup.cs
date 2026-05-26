@@ -1,4 +1,5 @@
-﻿using TestAppCRM.DataAccess.Extensions;
+﻿using TestAppCRM.Application.Extensions;
+using TestAppCRM.DataAccess.Extensions;
 
 namespace TestAppCRM;
 
@@ -25,6 +26,10 @@ public class Startup
 
         services.AddControllers();
         services.AddEndpointsApiExplorer();
+
+        services.AddMediatRServices();
+        services.AddValidators();
+        services.AddMapster();
 
         services.AddSwaggerGen();
     }
