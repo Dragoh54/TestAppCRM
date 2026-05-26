@@ -4,5 +4,9 @@ namespace TestAppCRM.Application.Contacts.Commands.DeleteContactCommand;
 
 public class DeleteContactValidator : AbstractValidator<DeleteContactCommand>
 {
-    public 
+    public DeleteContactValidator()
+    {
+        RuleFor(x => x.Id)
+            .NotEqual(Guid.Empty);
+    }
 }

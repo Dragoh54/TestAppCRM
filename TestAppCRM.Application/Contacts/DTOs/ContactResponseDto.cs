@@ -1,6 +1,6 @@
 ﻿namespace TestAppCRM.Application.Contacts.DTOs;
 
-public record ContactDto
+public record ContactResponseDto
 {
     public Guid Id { get; set; }
 

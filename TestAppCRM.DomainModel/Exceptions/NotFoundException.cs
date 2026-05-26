@@ -1,3 +1,6 @@
-﻿namespace MeetingService.DomainModel.Exceptions;
+﻿namespace TestAppCRM.DomainModel.Exceptions;
 
-public class NotFoundException(string message) : Exception(message);
+public class NotFoundException(string message) : Exception(message)
+{
+
+}

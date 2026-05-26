@@ -1,4 +1,6 @@
-﻿namespace TestAppCRM.Application.Interfaces;
+﻿using TestAppCRM.Application.Interfaces.Repositories;
+
+namespace TestAppCRM.Application.Interfaces;
 
 public interface IUnitOfWork
 {

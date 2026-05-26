@@ -58,3 +58,6 @@ nunit-*.xml
 
 # Rider
 .idea/
+
+# Secrets
+**/*.API/secrets.json

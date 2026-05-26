@@ -1,6 +1,6 @@
-﻿namespace TestAppCRM.Application.Contacts.Queries.GetAllContactsQuery;
+﻿using MediatR;
+using TestAppCRM.Application.Contacts.DTOs;
 
-public class GetAllContactsQuery
-{
-    
-}
+namespace TestAppCRM.Application.Contacts.Queries.GetAllContactsQuery;
+
+public record GetAllContactsQuery : IRequest<List<ContactResponseDto>>;

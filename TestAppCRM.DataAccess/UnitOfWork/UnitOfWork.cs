@@ -1,4 +1,5 @@
 ﻿using TestAppCRM.Application.Interfaces;
+using TestAppCRM.Application.Interfaces.Repositories;
 using TestAppCRM.DataAccess.Context;
 
 namespace TestAppCRM.DataAccess.UnitOfWork;
@@ -12,7 +13,7 @@ public class UnitOfWork : IUnitOfWork
     {
         _context = context;
     }
-    
+
     public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
         return await _context.SaveChangesAsync(cancellationToken);

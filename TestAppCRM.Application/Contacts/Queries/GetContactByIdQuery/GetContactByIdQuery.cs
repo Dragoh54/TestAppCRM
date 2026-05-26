@@ -1,6 +1,14 @@
-﻿namespace TestAppCRM.Application.Contacts.Queries.GetContactByIdQuery;
+﻿using MediatR;
+using TestAppCRM.Application.Contacts.DTOs;
 
-public class GetContactByIdQuery
+namespace TestAppCRM.Application.Contacts.Queries.GetContactByIdQuery;
+
+public record GetContactByIdQuery : IRequest<ContactResponseDto>
 {
+    public GetContactByIdQuery(GetContactByIdRequestDto request)
+    {
+        Id = request.Id;
+    }
     
+    public Guid Id { get; set; }
 }

@@ -1,6 +1,12 @@
-﻿namespace TestAppCRM.Application.Contacts.Queries.GetContactByIdQuery;
+﻿using FluentValidation;
 
-public class GetContactByIdQueryValidator
+namespace TestAppCRM.Application.Contacts.Queries.GetContactByIdQuery;
+
+public class GetContactByIdQueryValidator : AbstractValidator<GetContactByIdQuery>
 {
-    
+    public GetContactByIdQueryValidator()
+    {
+        RuleFor(x => x.Id)
+            .NotEqual(Guid.Empty);
+    }
 }

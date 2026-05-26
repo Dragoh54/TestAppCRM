@@ -1,5 +1,6 @@
 ﻿using TestAppCRM.Application.Extensions;
 using TestAppCRM.DataAccess.Extensions;
+using TestAppCRM.Middlewares;
 
 namespace TestAppCRM;
 
@@ -48,5 +49,12 @@ public class Startup
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+        
+        app.UseMiddleware<ExceptionHandlerMiddleware>();
+        
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
     }
 }

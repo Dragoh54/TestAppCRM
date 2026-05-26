@@ -1,3 +1,3 @@
-﻿namespace MeetingService.DomainModel.Exceptions;
+﻿namespace TestAppCRM.DomainModel.Exceptions;
 
 public class AlreadyExistsException(string message) : Exception(message);

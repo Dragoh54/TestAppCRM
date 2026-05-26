@@ -27,7 +27,7 @@ public class ContactRepository : IContactRepository
             .FirstOrDefaultAsync(contact => contact.Id == id, cancellationToken);
     }
 
-    public async Task<Contact?> AddAsync(Contact contact, CancellationToken cancellationToken = default)
+    public async Task<Contact> AddAsync(Contact contact, CancellationToken cancellationToken = default)
     {
         var addedContact = await _context.Contacts.AddAsync(contact, cancellationToken);
         
@@ -42,5 +42,19 @@ public class ContactRepository : IContactRepository
     public void Delete(Contact contact)
     {
         _context.Contacts.Remove(contact);
+    }
+
+    public async Task<(List<Contact> Items, int TotalCount)> GetPaginatedAsync(int page, int pageSize, CancellationToken cancellationToken = default)
+    {
+        var query = _context.Contacts.AsNoTracking();
+
+        var totalCount = await query.CountAsync(cancellationToken);
+
+        var contacts = await query
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync(cancellationToken);
+
+        return (contacts, totalCount);
     }
 }
