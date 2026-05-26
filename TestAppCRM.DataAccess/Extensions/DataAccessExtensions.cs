@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TestAppCRM.Application.Interfaces;
 using TestAppCRM.Application.Interfaces.Repositories;
 using TestAppCRM.DataAccess.Context;
+using TestAppCRM.DataAccess.DataSeed;
 using TestAppCRM.DataAccess.Repositories;
 
 namespace TestAppCRM.DataAccess.Extensions;
@@ -24,5 +25,15 @@ public static class DataAccessExtensions
     public static void AddUnitOfWork(this IServiceCollection services)
     {
         services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
+    }
+    
+    public static async Task SeedDatabaseAsync(this IServiceProvider services)
+    {
+        using var scope = services.CreateScope();
+
+        var context = scope.ServiceProvider
+            .GetRequiredService<TestAppCrmDbContext>();
+
+        await DbInitializer.SeedAsync(context);
     }
 }

@@ -22,7 +22,7 @@ namespace TestAppCRM.DataAccess.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("TestAppCRM.DomainModel.Contact", b =>
+            modelBuilder.Entity("TestAppCRM.DomainModel.Entities.Contact", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

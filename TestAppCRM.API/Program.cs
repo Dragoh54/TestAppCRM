@@ -1,4 +1,5 @@
 using TestAppCRM;
+using TestAppCRM.DataAccess.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,5 +9,7 @@ startup.ConfigureServices(builder.Services);
 
 var app = builder.Build();
 startup.Configure(app, app.Environment);
+
+await app.Services.SeedDatabaseAsync();
 
 app.Run();

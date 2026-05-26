@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TestAppCRM.DomainModel;
+using TestAppCRM.DomainModel.Entities;
 
 namespace TestAppCRM.DataAccess.Configurations;
 

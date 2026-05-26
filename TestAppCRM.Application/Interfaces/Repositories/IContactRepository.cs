@@ -1,4 +1,5 @@
 ﻿using TestAppCRM.DomainModel;
+using TestAppCRM.DomainModel.Entities;
 
 namespace TestAppCRM.Application.Interfaces.Repositories;
 

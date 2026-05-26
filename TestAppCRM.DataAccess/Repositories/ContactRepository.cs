@@ -2,6 +2,7 @@
 using TestAppCRM.Application.Interfaces.Repositories;
 using TestAppCRM.DataAccess.Context;
 using TestAppCRM.DomainModel;
+using TestAppCRM.DomainModel.Entities;
 
 namespace TestAppCRM.DataAccess.Repositories;
 

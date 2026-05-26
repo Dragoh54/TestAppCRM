@@ -1,4 +1,4 @@
-﻿namespace TestAppCRM.DomainModel;
+﻿namespace TestAppCRM.DomainModel.Entities;
 
 public class Contact
 {

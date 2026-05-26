@@ -4,6 +4,7 @@ using TestAppCRM.Application.Contacts.DTOs;
 using TestAppCRM.Application.Interfaces;
 using TestAppCRM.Application.Interfaces.Repositories;
 using TestAppCRM.DomainModel;
+using TestAppCRM.DomainModel.Entities;
 
 namespace TestAppCRM.Application.Contacts.Commands.CreateContactCommand;
 

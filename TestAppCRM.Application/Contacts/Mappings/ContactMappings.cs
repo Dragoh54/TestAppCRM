@@ -3,6 +3,7 @@ using TestAppCRM.Application.Contacts.Commands.CreateContactCommand;
 using TestAppCRM.Application.Contacts.Commands.UpdateContactCommand;
 using TestAppCRM.Application.Contacts.DTOs;
 using TestAppCRM.DomainModel;
+using TestAppCRM.DomainModel.Entities;
 
 namespace TestAppCRM.Application.Contacts.Mappings;
 
