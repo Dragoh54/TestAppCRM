@@ -28,13 +28,21 @@ public class Startup
         services.AddApplication();
 
         services.AddSwaggerGen();
+        
+        services.AddCors(options =>
+        {
+            options.AddPolicy("Client", policy =>
+            {
+                policy
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowAnyOrigin();
+            });
+        });
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-        app.UseSwagger();
-        app.UseSwaggerUI();
-        
         app.UseDefaultFiles();
         app.UseStaticFiles();
         app.UseRouting();
@@ -44,6 +52,8 @@ public class Startup
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+        
+        app.UseCors("Client");
         
         app.UseMiddleware<ExceptionHandlerMiddleware>();
         
